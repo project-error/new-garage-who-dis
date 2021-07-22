@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap');
+
+body {
+    overflow: hidden;
+    font-family: 'Rubik', sans-serif;
+}
+
+.wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    backdrop-filter: blur(10px);
+}
+
+.vehicle-selector-container {
+    position: relative;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    width: 85%;
+    height: 8%;
+    
+    z-index: 1;
+}
+
+/* Up and down arrows https://stackoverflow.com/questions/52572821/how-to-make-both-up-down-arrow-in-select-input-field-in-css/52600787 */
+select {
+    display: inline-block;
+    position: relative;
+    padding: 1.0vh 7.0vh 1.0vh 2.0vh;
+
+    border: none;
+    border-radius: 1vh;
+
+    font: inherit;
+    font-size: 1.5vh;
+    line-height: 2.5vh;
+    color: #ffffff82;
+
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background: rgba(0, 0, 0, 0.4);
+    transition: 0.1s;
+}
+
+select:hover {
+    transform: scale(1.05);
+}
+
+select.arrows {
+    background-image: url('../img/arrows.png');
+    background-position: calc(100% - .50vh), 100% 0;
+    background-repeat: no-repeat;
+    background-size: 2.5vh;
+}
+
+select.arrows:focus {
+    border-color: blue;
+    outline: 0;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 85%;
+    height: 60%;
+
+    overflow: hidden;
+}
+
+.vehicle-container {
+    position: relative;
+    width: 20%;
+    height: 90%;
+
+    border-radius: 1.64vh;
+    /*background-color: rgba(255, 255, 255, 0.95); Original color from figma*/
+    background-color: #5d5d5dc2;
+    padding-bottom: 1.5vh;
+}
+
+.vehicle-image-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+
+    border-top-left-radius: 1.64vh;
+    border-top-right-radius: 1.64vh;
+}
+
+.vehicle-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    border-top-left-radius: 1.64vh;
+    border-top-right-radius: 1.64vh;
+}
+
+.impound {
+    z-index: 1;
+}
+
+.vehicle-info-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0.4vh;
+    grid-row-gap: 0.4vh;
+    top: 0;
+    left: 0;
+    height: 35%;
+    width: 100%;
+}
+
+.vehicle-info-block {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.vehicle-info-block span {
+    font-size: 1.0vw;
+    margin-left: 5%;
+}
+
+.plate {
+    text-transform: uppercase;
+}
+
+.info-title {
+    color: #B7B7B7;
+}
+
+.info-data {
+    color: #FFFFFF;
+}
+
+.vehicle-date-container {
+    position: relative;
+    display: flex;  
+    text-align: center;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+}
+
+.vehicle-date-container p {
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: #B7B7B7;
+}
+
+.vehicle-btn-container {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: column;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+
+    border-bottom-left-radius: 1.64vh;
+    border-bottom-right-radius: 1.64vh;
+}
+
+.vehicle-top-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+}
+
+.vehicle-top-container button {
+    padding: 0.8vh 1.8vh;
+    border-radius: 0.8vh;
+    border: none;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 100;
+    font-size: 1.0vw;
+    color: #FFFFFF;
+
+    z-index: 1;
+    transition: 0.1s;
+}
+
+.vehicle-top-container button:hover {
+    transform: scale(1.05);
+}
+
+.red {
+    background-color: #5E1515;
+}
+
+.green {
+    background-color: #0F501E;
+}
+
+.spawn-btn {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 90%;
+
+    padding: 0.8vh;
+    border-radius: 0.8vh;
+    border: none;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 100;
+    font-size: 1.0vw;
+    color: #FFFFFF;
+
+    background-color: #0F1650;
+    z-index: 1;
+    transition: 0.1s;
+}
+
+.spawn-btn:hover {
+    transform: scale(1.05);
+}
+
+.arrows-container {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 60%;
+}
+
+.arrows-container .fas {
+    font-size: 2.5vw;
+
+    color: rgba(255, 255, 255, 0.54);
+    transition: 0.1s;
+}
+
+.arrows-container .fas:hover {
+    transform: scale(1.2);
+}

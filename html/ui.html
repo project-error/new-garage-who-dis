@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Basic metas-->
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="new-garage-who-dis">
+    <title>new-garage-who-dis</title>
+
+    <!--CSS and hide body-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="vehicle-selector-container">
+            <p>
+                <select class="arrows">
+                    <option value="" selected>Select a category</option>
+                </select>
+            </p>
+        </div>
+        <div class="container">
+            <div class="vehicle-container">
+                <div class="vehicle-image-container">
+                    <img class="vehicle-image" src="./img/test.png">
+                    <img id="data-impound" class="vehicle-image impound" src="./img/impound.png">
+                </div>
+
+                <div class="vehicle-info-container">
+                    <div class="vehicle-info-block">
+                        <span class="info-title">Model</span>
+                        <span class="info-data">Entity</span>
+                    </div>
+                    <div class="vehicle-info-block">
+                        <span class="info-title">Garage</span>
+                        <span class="info-data">Pink Cage</span>
+                    </div>
+                    <div class="vehicle-info-block">
+                        <span class="info-title">Class</span>
+                        <span class="info-data">Sports</span>
+                    </div>
+                    <div class="vehicle-info-block">
+                        <span class="info-title">License Plate</span>
+                        <span class="info-data plate">47zuv509</span>
+                    </div>
+                    <div class="vehicle-info-block">
+                        <span class="info-title">Engine State</span>
+                        <span class="info-data">Severe</span>
+                    </div>
+                    <div class="vehicle-info-block">
+                        <span class="info-title">Body State</span>
+                        <span class="info-data">Severe</span>
+                    </div>
+                </div>
+                <div class="vehicle-date-container">
+                    <p>
+                        Purchased on Thursday, March 5th
+                    </p>
+                </div>
+                <div class="vehicle-btn-container">
+                    <div class="vehicle-top-container">
+                        <button id="data-sell" class="red">Sell Vehicle</button>
+                        <button id="data-photo" class="green">New Photo</button>
+                    </div>
+                    <button id="data-spawn" class="spawn-btn">Spawn Vehicle</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrows-container">
+            <i id="left-arrow" class="fas fa-chevron-left"></i>
+            <i id="right-arrow" class="fas fa-chevron-right"></i>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="./js/nui.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+
+</html>

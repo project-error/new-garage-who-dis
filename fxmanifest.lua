@@ -18,6 +18,15 @@ client_scripts {
 	'client/**/*.lua',
 }
 
+ui_page 'html/ui.html'
+
+files {
+	'html/ui.html',
+	'html/js/*.js',
+	'html/css/*.css',
+	'html/img/*.png'
+}
+
 dependencies {
 	--'mysql-async', -- https://github.com/brouznouf/fivem-mysql-async
 	--'ghmattimysql', -- https://github.com/GHMatti/ghmattimysql
